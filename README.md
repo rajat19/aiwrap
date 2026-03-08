@@ -14,18 +14,18 @@ Supported providers:
 Authenticate to GitHub Packages in your consumer project's `.npmrc`:
 
 ```ini
-@rajat:registry=https://npm.pkg.github.com
+@rajat19:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
 ```
 
 ```bash
-npm install @rajat/aiwrap
+npm install @rajat19/aiwrap
 ```
 
 ## Usage
 
 ```ts
-import { MultiAiClient } from "@rajat/aiwrap";
+import { MultiAiClient } from "@rajat19/aiwrap";
 
 const client = new MultiAiClient(); // Reads process.env by default
 
@@ -136,4 +136,4 @@ CI and publish are intentionally separate workflows.
 
 1. Push your commits to GitHub.
 2. Create and push a version tag like `v0.1.1` to trigger publish, or publish a GitHub Release.
-3. `Publish GitHub Package` runs independently and publishes `@rajat/aiwrap` to GitHub Packages.
+3. `Publish GitHub Package` runs independently and publishes `@rajat19/aiwrap` to GitHub Packages.

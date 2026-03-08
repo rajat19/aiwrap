@@ -1,10 +1,10 @@
 {
-  "name": "@rajat/aiwrap",
-  "version": "0.1.0",
+  "name": "@rajat19/aiwrap",
+  "version": "0.0.1",
   "description": "Environment-driven Node.js wrapper for multiple AI providers",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rajat/aiwrap.git"
+    "url": "https://github.com/rajat19/aiwrap.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
