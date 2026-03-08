@@ -131,11 +131,9 @@ npm test
 
 ## Publishing (GitHub Packages)
 
-Automated publish is configured in [`publish-github-packages.yml`](/Users/rajat/Desktop/github/aiwrap/.github/workflows/publish-github-packages.yml).
-It depends on successful [`ci.yml`](/Users/rajat/Desktop/github/aiwrap/.github/workflows/ci.yml) output instead of re-running install/test/build in publish.
+Automated publish is configured in [`publish-gh.yml`](/Users/rajat/Desktop/github/aiwrap/.github/workflows/publish-gh.yml).
+CI and publish are intentionally separate workflows.
 
 1. Push your commits to GitHub.
-2. Create a version tag like `v0.1.1`.
-3. Push the tag (`git push origin v0.1.1`).
-4. `CI` runs tests and creates a `npm-package` artifact (`.tgz`).
-5. `Publish GitHub Package` triggers from that successful CI run and publishes the artifact to GitHub Packages.
+2. Create and push a version tag like `v0.1.1` to trigger publish, or publish a GitHub Release.
+3. `Publish GitHub Package` runs independently and publishes `@rajat/aiwrap` to GitHub Packages.
