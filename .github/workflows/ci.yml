@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "v*.*.*"
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - run: npm test
+      - name: Pack npm artifact for release tags
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: npm pack
+      - name: Upload package artifact
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-package
+          path: "*.tgz"
+          if-no-files-found: error
