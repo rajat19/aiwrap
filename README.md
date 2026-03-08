@@ -131,7 +131,7 @@ npm test
 
 ## Publishing (GitHub Packages)
 
-Automated publish is configured in [`publish-gh.yml`](/Users/rajat/Desktop/github/aiwrap/.github/workflows/publish-gh.yml).
+Automated publish is configured in [`publish-gh.yml`](.github/workflows/publish-gh.yml).
 CI and publish are intentionally separate workflows.
 
 1. Push your commits to GitHub.

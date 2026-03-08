@@ -1,6 +1,6 @@
 {
   "name": "@rajat19/aiwrap",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Environment-driven Node.js wrapper for multiple AI providers",
   "repository": {
     "type": "git",
