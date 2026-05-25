@@ -11,12 +11,20 @@ Supported providers:
 
 ## Install
 
-Authenticate to GitHub Packages in your consumer project's `.npmrc`:
+1. Add your GitHub token to your `.env` file:
+
+```env
+GITHUB_PACKAGES_TOKEN=your_github_token_here
+```
+
+2. Authenticate to GitHub Packages in your consumer project's `.npmrc`:
 
 ```ini
 @rajat19:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+//npm.pkg.github.com/:_authToken=${GITHUB_PACKAGES_TOKEN}
 ```
+
+3. Install the package:
 
 ```bash
 npm install @rajat19/aiwrap
